@@ -5,7 +5,7 @@
         "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
         "c": "chcp 65001 && cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
         "zig": "zig run",
-        "cpp": "chcp 65001 && cd $dir && g++ $fileName -o build\\$fileNameWithoutExt && build\\$fileNameWithoutExt",
+        "cpp": "chcp 65001 && cd $dir && g++ --std=c++17 $fileName -o build\\$fileNameWithoutExt && build\\$fileNameWithoutExt",
         "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
         "php": "php",
         "python": "python -u",
@@ -55,5 +55,10 @@
         "sml": "cd $dir && sml $fileName",
         "mojo": "mojo run"
     },
-    "code-runner.runInTerminal": true
+    "code-runner.runInTerminal": true,
+    "files.associations": {
+        "*.tcc": "cpp",
+        "string": "cpp",
+        "string_view": "cpp"
+    }
 }
